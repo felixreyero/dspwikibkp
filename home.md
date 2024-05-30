@@ -6,5 +6,5 @@ Bienvenido a la wiki del Datasphere JSON Repository. Aquí encontrarás toda la 
 [Tablero ServiceDesk](Tablero-ServiceDesk)
 - Esta sección detalla la arquitectura DSP+SAC del tablero ServiceDesk.
 
-[Tutorial-GIT](Tutorial-GIT)
+[Tutorial-GIT](Tutorial GIT)
 - Esta sección contiene una guía introductoria sobre Git y control de versiones. Explica conceptos clave como los estados de Git (directorio Git, directorio de trabajo y área de preparación) y cubre comandos esenciales, como git config, git init, git add, git commit, git push, git pull, y más. La guía está diseñada para ayudar a los usuarios a entender y usar Git de manera efectiva en sus proyectos de desarrollo.
