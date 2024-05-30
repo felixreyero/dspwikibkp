@@ -1,0 +1,1 @@
+Pagina central de la wiki.
