@@ -6,7 +6,7 @@
 
 ![arqDspSD](uploads/363b382df170e4ccde24c012e788709d/arqDspSD.PNG)
 
-## Flujo
+## Flujo -- EN PROCESO (Se documenta ambiente DEV cambios post división gerencias)
 
 ### PTRF_ServiceDesk_Solicitud_00
 Se toma la tabla remota de origen PTRF_ServiceDesk_Solicitud_00 (SASQL01_DBSD_GSN: "dbo"."GSN_Actual$") y se calendariza la carga para tenerla en memoria los miércoles luego del volcado por parte de Sistemas Colaborativos.
@@ -166,6 +166,10 @@ La tabla de origen tiene asociaciones en los campos Fecha de creación, Fecha de
 
 #### Condiciones de Filtrado
 - La vista solo incluye registros donde `MS."CALMONTH"` está entre enero de 2024 (202400) y el mes de creación más reciente de las solicitudes.
+
+### MA - ServiceDesk - Estado por Periodo
+
+El modelo analítico tiene finalmente los siguientes indicadores: Calificación, Ingresados, Pendientes, Performance Pendientes, Performance Procesados, Procesados, Rechazados, Solucion_Dias y Tasa de Rechazos; y las siguientes dimensiones: Aplicacion, Calendar Month, En espera de, Fecha de creación, Fecha_de_Procesado, Gerencia, Mesa de Ayuda, Prioridad, Rechazado, Solicitud, Subtipo y Tipo.
 
 ## Schedule
 
