@@ -5,6 +5,9 @@ Bienvenido a la wiki del Datasphere Repository. Aquí encontrarás toda la infor
 [Transporte entre Espacios](Transporte-entre-Espacios)
 - Esta sección detalla el proceso para gestionar datos y objetos entre espacios de trabajo. Incluye la organización de carpetas por origen de tablas, creación de tablas de tiempo, y configuración de conexiones específicas para desarrollo y producción. Se explican los pasos para importar y exportar tablas remotas y vistas, realizar el deploy y compartir tablas entre espacios. También aborda la configuración de schedules de importación y ajustes en modelos analíticos para asegurar su correcto funcionamiento en producción.
 
+[Conexiones DSP BBDD](Conexiones-DSP-BBDD)
+- Esta sección detalla el proceso para crear conexiones desde DSP a BBDD.
+
 ## Proyectos
 
 [Tablero ServiceDesk](Tablero-ServiceDesk)
