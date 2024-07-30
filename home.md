@@ -8,6 +8,9 @@ Bienvenido a la wiki del Datasphere Repository. Aquí encontrarás toda la infor
 [Conexiones DSP BBDD](Conexiones-DSP-BBDD)
 - Esta sección detalla el proceso para crear conexiones desde DSP a BBDD.
 
+[Uso de fechas con Jerarquías](Uso-de-fechas-con-Jerarquías)
+- Esta sección detalla el proceso para generar dimensiones de fechas jerárquicas para su correcta explotación en SAC.
+
 ## Proyectos
 
 [Tablero ServiceDesk](Tablero-ServiceDesk)
