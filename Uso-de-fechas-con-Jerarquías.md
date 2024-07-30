@@ -11,7 +11,7 @@
 ## Importación de tablas remotas
 
 - Dentro del Data Builder (con la precondición de que se haya creado la conexión con la BBDD -en este caso con la Replica de Máximo en SBIRP01-) dentro del Espacio se puede importar la tabla remota:
-- 
+
 ![image](uploads/45804a57063296e88b10c25685b073d1/image.png)
 
 - Se selecciona la conexión, se eligen las tablas, se importa y se despliega.
