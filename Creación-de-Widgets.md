@@ -19,7 +19,6 @@ En la pantalla de Custom Widgets, haz clic en el botón + (Agregar).
 Aparecerá un cuadro de diálogo donde puedes cargar tu archivo .zip. Selecciona el archivo comprimido de tu widget y haz clic en Subir.
 Asegúrate de proporcionar un nombre y descripción claros para el widget si te lo solicita.
   
-
 5. Verificar el Widget
 Una vez subido, el widget debería aparecer en la lista de Widgets Personalizados.
 Puedes verificar que todo esté en orden seleccionándolo de la lista.
@@ -29,15 +28,19 @@ Crea o abre un dashboard o story en SAC.
 Selecciona Insertar y busca tu widget en la sección de Widgets Personalizados.
 Arrastra y suelta el widget en el canvas, y configúralo según tus necesidades.
 
-7. Permisos Insuficientes o Licencia Limitada[Gauche_Widget.zip](uploads/05afcc7a4424798d267959a23ab3b139/Gauche_Widget.zip)
+7. Permisos Insuficientes o Licencia Limitada
+Si no encuentras la opción para subir un widget personalizado en SAP Analytics Cloud (SAC), es posible que sea debido a uno de los siguientes motivos:
 
-[style.js](uploads/b38e3fdcecb38ba6e4e278296c7c7181/style.js)
-
-[main.js](uploads/7fa2a4839e2bf614637a3d2e0e5c4302/main.js)
-
-[widget.json](uploads/318a9bb7857e7ca6c447318e3b503318/widget.json)Si no encuentras la opción para subir un widget personalizado en SAP Analytics Cloud (SAC), es posible que sea debido a uno de los siguientes motivos:
-
-•	Permisos Insuficientes
+•Permisos Insuficientes
 Asegúrate de que tu cuenta tenga los permisos adecuados para crear y gestionar widgets personalizados. Necesitarás permisos de administrador o desarrollador.
-•	Licencia o Versión
+
+•Licencia o Versión
 No todas las versiones de SAP Analytics Cloud permiten la creación o importación de widgets personalizados. Verifica si tu instancia de SAC soporta widgets personalizados. En algunos casos, esta funcionalidad puede estar restringida o no habilitada en versiones específicas.
+
+[Gauche_Widget.zip](uploads/25ebf0a445bf2ffc4dde4aebadcc135a/Gauche_Widget.zip)
+
+[style.js](uploads/5b46bb51233fabcf38bd01f7cbe39bde/style.js)
+
+[main.js](uploads/fca6ede9862c4c3ffba26295e923efe2/main.js)
+
+[widget.json](uploads/4c9766942eaf6c416499cb6080cd6ba3/widget.json)
