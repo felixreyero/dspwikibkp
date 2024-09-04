@@ -18,6 +18,10 @@ Bienvenido a la wiki del Datasphere Repository. Aquí encontrarás toda la infor
 
 - Esta sección detalla el proceso para restringir el acceso a datos a través del uso de DAC.
 
+[Creación de Widgets](Creación_de_Widgets)
+
+- Esta sección detalla los pasos para crear Widgets personalizados para utilizar en SAC.
+
 ## Proyectos
 
 [Tablero ServiceDesk](Tablero-ServiceDesk)
