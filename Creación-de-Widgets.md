@@ -3,6 +3,8 @@ Para subir un widget personalizado a SAP Analytics Cloud (SAC), sigue estos paso
 1. Preparar el Widget
 Asegúrate de que tu widget esté completo el mismo debe contener los siguientes archivos: 
 Widget.json/Main.js/style.js
+
+![image](uploads/37a9f6d285a4516c730bb603aeabc46d/image.png)
  
 Empaqueta el widget en un archivo .zip. Esto debería incluir todos los archivos necesarios, como widget.json, main.js, style.js, y cualquier otro recurso que tu widget utilice.
 El ZIP debe contener los tres recursos del widget y se conservará en una misma carpeta junto con el json para poder subir ambos a SAC. 
@@ -18,6 +20,10 @@ Navega hasta la opción Custom Widgets (Widgets Personalizados) en el menú de c
 En la pantalla de Custom Widgets, haz clic en el botón + (Agregar).
 Aparecerá un cuadro de diálogo donde puedes cargar tu archivo .zip. Selecciona el archivo comprimido de tu widget y haz clic en Subir.
 Asegúrate de proporcionar un nombre y descripción claros para el widget si te lo solicita.
+
+![image](uploads/14f488657aeb5854ce109192a3b275e5/image.png)
+
+![image](uploads/10a54f599864e2686914dfd4308a72a3/image.png)
   
 5. Verificar el Widget
 Una vez subido, el widget debería aparecer en la lista de Widgets Personalizados.
