@@ -50,3 +50,5 @@ No todas las versiones de SAP Analytics Cloud permiten la creaci√≥n o importaci√
 [main.js](uploads/fca6ede9862c4c3ffba26295e923efe2/main.js)
 
 [widget.json](uploads/4c9766942eaf6c416499cb6080cd6ba3/widget.json)
+
+Referencias: Ejemplos de Widgets descargados del siguiente repo de GitHub (https://github.com/SAP-samples/analytics-cloud-datasphere-community-content/tree/main).
