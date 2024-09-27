@@ -1,6 +1,6 @@
 ## Orígenes de Datos
 
-Por una cuestión de permisos no se puede llegar directamente a la base comercial. El área de Base de datos de Oracle realiza un export de PA1 y un import en PU3 de las siguientes tablas: `BNKA, DFKKZK, FKKVKP, ZTOV_TIPOS_LOGS, ZTOVLOGS, ZTOVTIPOS_TRAMIT, ZTOVTRAMITES, ZTOVUSERS, ZTOVUSERS_CONT, ZTU_SOLIC_REG, ZTUDIST_REGION`. Se establecerá una conexión vía Linked Server desde SBIRP01 hacia la base comercial en Oracle y para el procesamiento de los SP en SBIRP01 contra Oracle se utilizará `OPENQUERY` .
+Por una cuestión de permisos no se puede llegar directamente a la base comercial. El área de Base de datos de Oracle realiza un export de PA1 y un import en PU3 de las siguientes tablas: `BNKA, DFKKZK, FKKVKP, TGSBT, ZTOV_TIPOS_LOGS, ZTOVLOGS, ZTOVTIPOS_TRAMIT, ZTOVTRAMITES, ZTOVUSERS, ZTOVUSERS_CONT, ZTU_COBROS_OV ,ZTU_SOLIC_REG, ZTUDIST_REGION`. Se establecerá una conexión vía Linked Server desde SBIRP01 hacia la base comercial en Oracle y para el procesamiento de los SP en SBIRP01 contra Oracle se utilizará `OPENQUERY` .
 
 La tabla de Logs que se usa para obtener datos sobre las consultas -ZTOVLOGS- contiene millones de registros. Se llevará a cabo una estrategia para normalizar y granularizar los registros. Aunque no es tan grande como ZTOVLOGS, para la tabla ZTOVTRAMITES se implementó la misma estrategia.
 
