@@ -32,9 +32,19 @@ Se filtra por el estado (`STATUS`) y origen (`ORIGEN`) de la solicitud, y solo i
 
 #### p_OV_Carga_Cobros_Diario
 
-Este procedimiento sincroniza la tabla `OV_Cobros_Diario` con datos de la tabla `DFKKZK` en Oracle. Los campos que trae son `keyz1`, `BUDAT`, y la suma de los montos (`SUMMS`), y los guarda en los campos `ID_Medio`, `Fecha_Cobro`, y `Total_Cobro` de la tabla destino.
+Este procedimiento sincroniza la tabla `OV_Cobros_Diario` con datos de la tabla `DFKKZK` en Oracle. Se obtienen los campos `keyz1` (ID del medio), `BUDAT` (fecha de contabilización), el número de cobros (`anzpo`), y la suma de los montos (`SUMMS`). Estos datos se insertan o actualizan en los campos `ID_Medio`, `Fecha_Cobro`, `Cantidad_Cobros`, y `Total_Cobro` de la tabla destino.
 
-Se filtra para incluir solo los registros donde la fecha de cobro (`BUDAT`) sea igual o mayor a la última fecha registrada en la tabla destino, o desde el 01/01/2006 si no hay registros. Los datos se agrupan por el ID del medio (`keyz1`) y la fecha de cobro.
+El procedimiento primero busca la última fecha registrada en `OV_Cobros_Diario`. Si no hay registros, se utiliza la fecha base del 01/01/2006. A partir de esa fecha, se extraen los registros desde Oracle donde la fecha de contabilización (`BUDAT`) sea igual o posterior a esta.
+
+Además, se excluyen registros específicos:
+
+* Registros de remesas fiscales (`GSBER = BCOS`) donde el campo `ERNAM` sea distinto a 'Batchuser'.
+* Registros donde el campo `GSBER` esté en blanco.
+
+Los datos se agrupan por `ID_Medio` y `Fecha_Cobro`, y se comparan con la tabla de destino.
+
+* Si ya existe un registro con el mismo `ID_Medio` y `Fecha_Cobro`, se actualiza el `Total_Cobro` y el `Cantidad_Cobros`.
+* Si no existe, se inserta un nuevo registro.
 
 #### p_OV_Carga_Cuentas_Totales_Diario
 
@@ -53,6 +63,15 @@ Se filtran los contratos que no tienen fecha de baja (`FECHA_BAJA = '00000000'`)
 Este procedimiento sincroniza la tabla `OV_Distrito_Region` con datos provenientes de la tabla `GSC.ZTUDIST_REGION` en Oracle. Se utilizan los campos `ID_Distrito`, `ID_Region` y `Descripcion_Region` tanto en la tabla de origen como en la de destino.
 
 Se actualizan las descripciones de región en la tabla destino cuando hay coincidencias en ambos IDs. Si no hay coincidencias, se insertan nuevos registros.
+
+#### p_OV_Carga_Division
+
+Este procedimiento sincroniza la tabla `OV_Division` con datos provenientes de la tabla `TGSBT` en Oracle. Los campos que se obtienen son `GSBER` (ID de la división) y `GTEXT` (Descripción de la división). Estos valores se insertan o actualizan en los campos `ID` y `Descripcion` de la tabla de destino.
+
+El procedimiento ejecuta una consulta dinámica que extrae los datos de Oracle a través de `OPENQUERY`. Se filtran los registros para incluir solo aquellos donde el campo `MANDT` sea igual a '100'.
+
+* Si ya existe un registro en `OV_Division` con el mismo `ID`, se actualiza la `Descripcion`.
+* Si no existe un registro con ese `ID`, se inserta un nuevo registro con el `ID` y la `Descripcion` obtenidos de Oracle.
 
 #### p_OV_Carga_Logs_Diarios
 
@@ -93,6 +112,14 @@ Se filtra para incluir solo los registros donde la fecha de alta sea válida (di
 ### ETL DSP
 
 En Datasphere se utilizan vistas que luego se persisten para luego modelizar y poder explotar desde SAC:
+
+#### VSF_Cobros_x_Medio
+
+Esta consulta resume datos de cobros diarios provenientes de varias tablas relacionadas con medios de pago y divisiones. Utiliza la tabla `OV_Cobros_Diario` para obtener la información de los cobros, y se une con las tablas `OV_Medios_de_Pago` y `OV_Division` para obtener descripciones asociadas a los medios de pago y divisiones.
+
+Los campos clave incluyen `Fecha_Cobro`, que se transforma en un formato `CALMONTH` (año y mes concatenados), y `ID_Medio`, que se utiliza para vincular las descripciones correspondientes. Se priorizan las descripciones de los medios de pago (`OV_Medios_de_Pago`), pero si no están disponibles, se usan las descripciones de divisiones (`OV_Division`), o en su defecto, el `ID_Medio` de la tabla principal.
+
+La consulta agrupa los datos por el mes de cobro (`CALMONTH`) y el medio de pago o división, y calcula el total de cobros (`CantidadCobros`) y el monto total (`Total_Cobro`).
 
 #### VSF_Contadores_OV
 
