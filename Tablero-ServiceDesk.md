@@ -70,6 +70,37 @@ En esta capa se integra también la restricción de acceso a datos por DAC docum
 - **Descripción**: Crea un campo que representa el mes y año de la fecha de procesado.
 - **Modificación**: Usa `CONCAT` y `SUBSTRING` en combinación con el `CASE` de "Fecha_de_Procesado" para obtener el año y mes en el formato "YYYYMM".
 
+#### Aplicación
+
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSN - Desarrollo GIS** y la "Categoría (Nivel 2)" es **AutoCAD**, entonces se clasifica como **AutoDesk**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSN - Desarrollo GIS** y la "Categoría (Nivel 2)" es **AutoDesk Vault**, entonces se clasifica como **AutoDesk**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSN - Desarrollo GIS** y la "Categoría (Nivel 2)" es **Estado de servicio**, entonces se clasifica como **GIS**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSN - Desarrollo GIS** y la "Categoría (Nivel 2)" es **Imágenes sistema GIS**, entonces se clasifica como **GIS**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSN - Desarrollo GIS** y la "Categoría (Nivel 2)" es **Sistema GIS**, entonces se clasifica como **GIS**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSN - Desarrollo GIS** y la "Categoría (Nivel 2)" es **\[DESAFECTADO\] TMDC (Tratamiento Masivo de Datos Catastrales)**, entonces se clasifica como **TMDC (Tratamiento Masivo de Datos Catastrales)**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - EAyP** y la "Categoría (Nivel 2)" es **Equipos informáticos**, entonces se clasifica como **SAP-Upgrade Tecnológico**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - EAyP** y la "Categoría (Nivel 2)" es **SAP**, entonces se clasifica como **SAP-Upgrade Tecnológico**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - EAyP** y la "Categoría (Nivel 2)" es **SAP - IRPA**, entonces se clasifica como **SAP-Upgrade Tecnológico**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - EAyP** y la "Categoría (Nivel 2)" es **SAP Mantenimiento**, entonces se clasifica como **SAP-Upgrade Tecnológico**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - EAyP** y la "Categoría (Nivel 2)" es **Soporte SAP Basis**, entonces se clasifica como **SAP-Upgrade Tecnológico**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - SAP Atención al Usuario y Datos Técnicos** y la "Categoría (Nivel 2)" es **SAP**, entonces se clasifica como **SAP Atención al Usuario y Datos Técnicos**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - SAP Atención al Usuario y Datos Técnicos** y la "Categoría (Nivel 2)" es **SAP Mantenimiento**, entonces se clasifica como **SAP Atención al Usuario y Datos Técnicos**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - SAP Contabilidad y Recaudación** y la "Categoría (Nivel 2)" es **SAP**, entonces se clasifica como **SAP Contabilidad y Recaudación**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - SAP Contabilidad y Recaudación** y la "Categoría (Nivel 2)" es **SAP Mantenimiento**, entonces se clasifica como **SAP Contabilidad y Recaudación**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - SAP Facturación** y la "Categoría (Nivel 2)" es **SAP**, entonces se clasifica como **SAP Facturación**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - SAP Facturación** y la "Categoría (Nivel 2)" es **SAP Mantenimiento**, entonces se clasifica como **SAP Facturación**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - SAP Gestión de Cobro** y la "Categoría (Nivel 2)" es **SAP**, entonces se clasifica como **SAP Gestión de Cobro**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - SAP Gestión de Cobro** y la "Categoría (Nivel 2)" es **SAP Mantenimiento**, entonces se clasifica como **SAP Gestión de Cobro**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - SAP Solución de Impresión** y la "Categoría (Nivel 2)" es **SAP**, entonces se clasifica como **SAP Solución de Impresión**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - SAP Solución de Impresión** y la "Categoría (Nivel 2)" es **SAP Mantenimiento**, entonces se clasifica como **SAP Solución de Impresión**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - Servicios Web (Sist. de Usuario)** y la "Categoría (Nivel 2)" es **Agenda de turnos**, entonces se clasifica como **Agenda Turnos/V.Vaciadero**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - Servicios Web (Sist. de Usuario)** y la "Categoría (Nivel 2)" es **Vales de Vaciadero**, entonces se clasifica como **Agenda Turnos/V.Vaciadero**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - Servicios Web (Sist. de Usuario)** y la "Categoría (Nivel 2)" es **Oficina virtual**, entonces se clasifica como **Oficina virtual**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - Servicios Web (Sist. de Usuario)** y la "Categoría (Nivel 2)" es **Aplicación móvil AySA**, entonces se clasifica como **Oficina virtual**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - Servicios Web (Sist. de Usuario)** y la "Categoría (Nivel 2)" es **Asistente Virtual (Chatbot)**, entonces se clasifica como **Chatbot**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - Servicios Web (Sist. de Usuario)** y la "Categoría (Nivel 2)" es **Sitio web Tarifa Social**, entonces se clasifica como **Sitio Web Inst./T.Social**.
+* Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - Servicios Web (Sist. de Usuario)** y la "Categoría (Nivel 2)" es **Sitio web institucional**, entonces se clasifica como **Sitio Web Inst./T.Social**.
+
 #### Clasificacion
 
 - **Descripción**: Clasifica las solicitudes basadas en el campo "Categoría (Nivel 3)".
@@ -96,6 +127,18 @@ En esta capa se integra también la restricción de acceso a datos por DAC docum
 
 - **Descripción**: Convierte el tiempo de solución de minutos a días hábiles.
 - **Modificación**: Divide el valor de "Soluciones (Tiempo hábil de última solución)" por 60 para obtener horas y luego por 8 para convertirlo a días hábiles.
+
+#### Exclusiones
+
+Se excluyen los registros que cumplen con alguna de las siguientes condiciones:
+
+1. Si la "Mesa de ayuda (Raíz)" es **DTI-GSN - Desarrollo GIS** y la "Categoría (Nivel 2)" es **UREM (Sist. de Gestión de Urbanizaciones Emergentes)**, entonces **excluir** este registro.
+2. Si la "Mesa de ayuda (Raíz)" es **DTI-GSU - Desarrollo SAR y SIS** y la "Categoría (Nivel 2)" es **UREM (Sist. de Gestión de Urbanizaciones Emergentes)**, entonces **excluir** este registro.
+3. Si la "Mesa de ayuda (Raíz)" es **\[DESAFECTADA\] DTI-GSN - Estudios Socioterritoriales** y la "Categoría (Nivel 2)" es **\[DESAFECTADO\] Estudios socioterritoriales**, entonces **excluir** este registro.
+4. Si la "Mesa de ayuda (Raíz)" es **\[DESAFECTADA\] DTI-GSN - Soporte CAD y Modelizadores** y la "Categoría (Nivel 2)" es **AutoCAD**, entonces **excluir** este registro.
+5. Si la "Mesa de ayuda (Raíz)" es **\[DESAFECTADA\] DTI-GSN - Soporte CAD y Modelizadores** y la "Categoría (Nivel 2)" es **AutoDesk Vault**, entonces **excluir** este registro.
+6. Si la "Mesa de ayuda (Raíz)" es **\[DESAFECTADA\] DTI-GSN - Soporte CAD y Modelizadores** y la "Categoría (Nivel 2)" es **Modelizadores**, entonces **excluir** este registro.
+7. Si la "Mesa de ayuda (Raíz)" es **\[DESAFECTADA\] DTI-GSN - Soporte CAD y Modelizadores** y la "Categoría (Nivel 2)" es **Sistema GIS**, entonces **excluir** este registro.
 
 ### HVSF - ServiceDesk - Estado por Periodo:
 
