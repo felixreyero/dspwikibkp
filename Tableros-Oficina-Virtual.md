@@ -140,5 +140,28 @@ Esta consulta se encarga de recopilar información sobre los trámites diarios d
 - **Tipo de Trámite:** Para incluir la descripción del tipo de trámite a través de `OV_Tipo_Tramite`.
 - **Región:** Para obtener la descripción de la región mediante `OV_Distrito_Region`.
 - **Estado del Trámite:** Para incluir la descripción del estado del trámite utilizando `OV_Tramite_Estado`.
-
 Los resultados se agrupan por la fecha de alta, la descripción del tipo de trámite, el origen del trámite, la región y el estado. Finalmente, se suma la cantidad de trámites para cada grupo, permitiendo ver cuántos trámites se realizaron en cada combinación de estos criterios.
+
+## Modelos Analiticos
+
+### DEV_MA_Consultas
+El modelo toma la vista VSF_Consultas_Diarias y expone el indicador heredado: Cantidad de Consultas.
+
+### DEV_MA_Tramites
+El modelo toma la vista VSF_Tramites_Diarios y expone el indicador heredado: Cantidad de Tramites.
+
+### DEV_MA_Contadores_OV
+El modelo toma la vista VSF_Contadores_OV, expone los siguientes indicadores:
+- Adheridos Factura Digital: Hereda el indicador Adheridos Factura Digital de la vista.
+- Cuentas Totales: Hereda el indicador Cuentas Totales de la vista.
+- Cuentas Únicas: Hereda el indicador Cuentas Únicas de la vista.
+- Usuarios Ultimo Ingreso: Hereda el indicador Usuarios Ultimo Ingreso de la vista.
+- Usuarios Únicos: Hereda el indicador Usuarios Usuarios Únicos de la vista.
+
+### DEV_MA_Adhesion_PP_ECP
+El modelo toma la vista VSF_Adhesion_PP_ECP, expone los siguientes indicadores:
+- Cantidad Adhesiones: Es un count distinct de ID
+- Cantidad Cuenta Contrato: Es un count distinct de Cuenta_Contrato
+- Cantidad Cuotas: Indica cantidad de cuotas del registro.
+- Cantidad Usuarios Mail: Es un count distinct de correos.
+- Total Deuda: Hereda el indicador Total_Deuda de la vista.
