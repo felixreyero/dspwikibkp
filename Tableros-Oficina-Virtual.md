@@ -165,3 +165,8 @@ El modelo toma la vista VSF_Adhesion_PP_ECP, expone los siguientes indicadores:
 - Cantidad Cuotas: Indica cantidad de cuotas del registro.
 - Cantidad Usuarios Mail: Es un count distinct de correos.
 - Total Deuda: Hereda el indicador Total_Deuda de la vista.
+
+### DEV_MA_Cobros_x_Medio
+El modelo toma la vista VSF_Cobros_x_Medio, expone los siguientes indicadores:
+- CantidadCobros: Hereda el indicador CantidadCobros de la vista.
+- Total: Hereda el indicador Total de la vista.
