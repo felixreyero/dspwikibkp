@@ -14,11 +14,11 @@ Bienvenido a la wiki del Datasphere Repository. Aquí encontrarás toda la infor
 
 - Esta sección detalla el proceso para generar dimensiones de fechas jerárquicas para su correcta explotación en SAC.
 
-[Implementación DAC](Implementación-DAC)
+[Implementación DAC](Implementaci%C3%B3n-DAC)
 
 - Esta sección detalla el proceso para restringir el acceso a datos a través del uso de DAC.
 
-[Creación de Widgets](Creación-de-Widgets)
+[Creación de Widgets](Creaci%C3%B3n-de-Widgets)
 
 - Esta sección detalla los pasos para crear Widgets personalizados para utilizar en SAC.
 
@@ -27,6 +27,14 @@ Bienvenido a la wiki del Datasphere Repository. Aquí encontrarás toda la infor
 [Tablero ServiceDesk](Tablero-ServiceDesk)
 
 - Esta sección detalla la arquitectura DSP+SAC del tablero ServiceDesk.
+
+[Tableros Oficina Virtual](Tableros-Oficina-Virtual)
+
+* Esta sección detalla la arquitectura PU3+ETL+BODW+DSP+SAC de los tableros de OV.
+
+[Reporting RISK](Reporting-RISK)
+
+- Esta sección detalla la arquitectura para la obtención de datos de RISK.
 
 ## Otros
 
