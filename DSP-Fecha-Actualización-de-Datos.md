@@ -19,8 +19,12 @@ Tanto la tabla como la vista fueron generadas en el espacio **Central PRD**, y p
 
 ![image.png](uploads/44811ae9182721dcaba528c6ed736393/image.png)
 
-## Utilización de la vista
+## Uso de la Vista
 
-Dentro del espacio al cual se compartió la vista y de la cual se desean conocer la ultima fecha de actualización de los datos de las bases de origen se debe generar una nueva vista: (ej para Loyal) IVSD__Ultima_Fecha_Backup_Loyal la cual llama a la vista mencionada anteriormente y obtiene los datos para sus bases especificas.
+En el espacio donde se haya compartido la vista, y desde donde se desea conocer la fecha de última actualización de los datos de origen, se debe crear una nueva vista (por ejemplo, para _Loyal_: `IVSD_Ultima_Fecha_Backup_Loyal`). Esta vista consulta la vista centralizada y recupera los datos correspondientes a sus bases específicas.
 
-Esta vista debe ser replicada al inicio de la task chain de la cual se toman los datos y de esta manera quedará grabado en su replica la fecha a la cual se encuentran los datos en el datawarehouse cloud.
+Esta vista debe ser ejecutada al inicio de la _task chain_ que alimenta las réplicas, de modo que la fecha de actualización quede registrada en la propia réplica dentro de SAP Data Warehouse Cloud.
+
+Se recomienda que esta vista sea del tipo **Dimensión**, y que sea utilizada en la vista y modelo analítico como **Asociación**, para evitar la duplicación del dato en cada registro. La vista debe incluir una columna que identifique el origen de los datos (nombre de la base de datos), la cual se usará como clave de mapeo para asociarla con los datos del modelo principal.
+
+![image.png](uploads/c14b7ea89dd8d0e9a3a0d37467c51b96/image.png)
